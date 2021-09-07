@@ -27,7 +27,7 @@ ZSH_THEME="af-magic"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -104,13 +104,13 @@ export LSCOLORS=bxfxcxdxcxegedabagacad
 export CLICOLOR=1
 
 # Set pure ZSH as a prompt
-autoload -U promptinit; promptinit
+# autoload -U promptinit; promptinit
 
 zstyle :prompt:pure:path color grey
 zstyle ':prompt:pure:prompt:*' color yellow
 zstyle :prompt:pure:git:branch color yellow 
 
-prompt pure
+# prompt pure
 
 
 
