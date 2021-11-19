@@ -97,8 +97,28 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias python="python3"
+alias python="python3.10"
 alias pip="pip3"
+
+mdch() {mkdir $1; cd $1}
+
+loop() {
+  "$@"
+  while true
+  do
+    PS3="Restart?: "
+    select yn in Y N; do
+    case $yn in
+        "Y") echo "\n\nRestarting Process...\n\n"; $@;;
+        "N") kill -s SIGINT -$$;;
+	"\n") echo "\n\nRestarting Process...\n\n"; $@;;
+	*) echo "\n\nRestarting Process...\n\n"; $@;;
+    esac
+    done
+  done
+}
+
+// _redir_tstp_term() {echo '\n\n Terminating Process \n\n'; kill -s SIGTERM -$1}
 
 export LSCOLORS=bxfxcxdxcxegedabagacad
 export CLICOLOR=1
