@@ -99,6 +99,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias python="python3.10"
 alias pip="pip3"
+alias dbuild="DOCKER_BUILDKIT=0 docker-compose build"
+alias dup="docker-compose up"
+alias ddown="docker-compose down"
 
 mdch() {mkdir $1; cd $1}
 
