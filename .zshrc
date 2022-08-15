@@ -121,6 +121,8 @@ loop() {
   done
 }
 
+venv() {source $1/bin/activate}
+
 // _redir_tstp_term() {echo '\n\n Terminating Process \n\n'; kill -s SIGTERM -$1}
 
 export LSCOLORS=bxfxcxdxcxegedabagacad
@@ -135,6 +137,10 @@ zstyle :prompt:pure:git:branch color yellow
 
 # prompt pure
 
+# Custom bindings 
+
+bindkey "^[^[[C": forward-word
+bindkey "^[^[[D": backward-word
 
 
 
