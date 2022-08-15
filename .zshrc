@@ -102,6 +102,8 @@ alias pip="pip3"
 alias dbuild="DOCKER_BUILDKIT=0 docker-compose build"
 alias dup="docker-compose up"
 alias ddown="docker-compose down"
+alias hlcal="dev dhlcal-pw-820"
+alias hulk="dev dhulk-pw-562"
 
 mdch() {mkdir $1; cd $1}
 
