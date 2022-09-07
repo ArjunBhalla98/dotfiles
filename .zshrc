@@ -125,6 +125,8 @@ loop() {
 
 venv() {source $1/bin/activate}
 
+git_acp() {git add .; git commit -m "$1"; git push;}
+
 // _redir_tstp_term() {echo '\n\n Terminating Process \n\n'; kill -s SIGTERM -$1}
 
 export LSCOLORS=bxfxcxdxcxegedabagacad
